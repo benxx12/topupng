@@ -27,6 +27,7 @@ function App() {
 
         {/* ── App routes ── */}
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/fund-wallet" element={<DashboardPage view="fund-wallet" />} />
         <Route path="/airtime" element={<BuyAirtimePage />} />
         <Route path="/data" element={<BuyDataPage />} />
         <Route path="/history" element={<HistoryPage />} />

@@ -2,10 +2,12 @@ import Header from '../../components/common/header'
 import Navigation from '../../components/common/navigation'
 import Footer from '../../components/common/footer'
 import { useState } from 'react'
-import { FiGlobe } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
+import { FiGlobe, FiChevronLeft } from 'react-icons/fi';
 
 function BuyAirtimePage() {
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const navigate = useNavigate();
+  const [phoneNumber, setPhoneNumber] = useState('')
   const [selectedNetwork, setSelectedNetwork] = useState('MTN ');
   const [selectedAmount, setSelectedAmount] = useState('₦1000');
   const [customAmount, setCustomAmount] = useState('');
@@ -45,7 +47,18 @@ function BuyAirtimePage() {
       <Header />
       <div className='mx-auto flex w-full max-w-[1440px] flex-col gap-[40px] bg-gray-50 px-0 py-0 md:flex-row md:px-8 md:py-10 lg:px-[120px] lg:py-12'>
           <div className='flex h-full w-full max-w-[708px] flex-grow flex-col items-start gap-[32px] bg-white p-[15px] md:rounded-[24px] md:border-[1px] md:p-[40px]'>
+            
             <div className='flex flex-col gap-[8px] w-full '>
+              <button
+              type='button'
+              onClick={() => navigate(-1)}
+              className='md:hidden flex items-center gap-[8px] text-[14px] font-semibold text-gray-700'
+            >
+              <span className='flex h-[32px] w-[32px] items-center justify-center rounded-full bg-gray-100'>
+                <FiChevronLeft className='h-[16px] w-[16px]' />
+              </span>
+              Back
+            </button>
               <h1 className='text-[24px] font-bold text-gray-900 '>Buy Airtime</h1>
               <p className='text-[14px] text-gray-500 '>Enter details below to purchase instant talktime</p>
             </div>
@@ -89,14 +102,14 @@ function BuyAirtimePage() {
           <button
             key={network.id}
             onClick={() => setSelectedNetwork(network.id)}
-            className={`py-[8px] px-[8px] rounded-[25px] font-semibold transition flex items-center justify-center gap-3 ${
+            className={`py-[8px] px-[8px] flex-wrap rounded-[25px] font-semibold transition flex items-center justify-center gap-3 ${
               selectedNetwork === network.id
                 ? 'bg-white border-2 border-blue-600 text-blue-600'
                 : 'bg-white border-2 border-gray-200 text-gray-900 hover:border-blue-600'
             }`}
           >
             <div
-              className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${network.bgColor} ${network.textColor}`}
+              className={`w-8 h-8 rounded-full xs:flex sm:flex md:hidden lg:flex items-center justify-center text-sm font-bold ${network.bgColor} ${network.textColor}`}
             >
               {network.icon}
             </div>

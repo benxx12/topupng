@@ -1,10 +1,12 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 import Header from '../../components/common/header'
   import Navigation from '../../components/common/navigation'
   import Footer from '../../components/common/footer'
-  import { FiSearch } from 'react-icons/fi';
+  import { FiSearch, FiChevronLeft } from 'react-icons/fi';
 
 function HistoryPage() {
+  const navigate = useNavigate();
   const [selectedFilter, setSelectedFilter] = useState('all');
   const filters = [
     { id: 'all', label: 'All'},
@@ -106,8 +108,19 @@ function HistoryPage() {
   return (
     <div className='pb-[88px] md:pb-0'>
         <Header />
-        <div className='mx-auto flex h-full w-full max-w-[1440px] flex-col gap-[32px] px-0 py-0 md:px-8 md:py-10 lg:px-[120px] lg:py-12'>
+        <div className='mx-auto flex h-full w-full max-w-[1440px] flex-col gap-[32px] px-[24px] py-[24px] md:px-8 md:py-10 lg:px-[120px] lg:py-12'>
+          
           <div className='flex w-full flex-col justify-between gap-4 md:flex-row md:items-center'>
+            <button
+            type='button'
+            onClick={() => navigate(-1)}
+            className='md:hidden flex items-center gap-[8px] text-[14px] font-semibold text-gray-700'
+          >
+            <span className='flex h-[32px] w-[32px] items-center justify-center rounded-full bg-gray-100'>
+              <FiChevronLeft className='h-[16px] w-[16px]' />
+            </span>
+            Back
+          </button>
             <div className='flex flex-col gap-[6px] md:w-auto'>
               <h1 className='text-[24px] font-bold text-gray-900 '>Transaction History</h1>
               <p className='text-[#475569] text-[14px]'>Monitor and search your previous airtime and data purchases</p>

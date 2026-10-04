@@ -14,7 +14,7 @@ function Navigation() {
 
   const isActive = (path) => location.pathname === path;
     return (
-        <div className='w-full bg-[white] h-fit fixed bottom-0 left-0 right-0 px-[24px] py-[12px] z-50 flex items-center justify-between text-white md:hidden shadow-[0_-4px_16px_rgba(15,23,42,0.06)]'>
+        <div className='w-full bg-[white] h-fit fixed bottom-0 left-0 right-0 px-[24px] py-[12px] z-50 flex items-center justify-between text-white md:hidden '>
             {navLinks.map((link) => (
                 <Link
                     key={link.path}
