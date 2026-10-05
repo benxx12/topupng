@@ -1,4 +1,4 @@
-import { useSearchParams } from "react-router-dom";
+
 import Header from "../../components/common/header"
 import Navigation from "../../components/common/navigation"
 import Footer from "../../components/common/footer"
@@ -6,27 +6,10 @@ import WalletBalance from '../../components/sections/Dashboard/WalletBalance.jsx
 import QuickActions from '../../components/sections/Dashboard/QuickActions.jsx';
 import RecentTransactions from '../../components/sections/Dashboard/RecentTransaction.jsx';
 import PromoCard from '../../components/sections/Dashboard/PromoCard.jsx';
-import FundWallet from './FundWallet';
 
 
-function DashboardPage({ view }) {
-    const [searchParams] = useSearchParams();
-    const isFundWalletView = view === 'fund-wallet' || searchParams.get('view') === 'fund-wallet';
-
-    if (isFundWalletView) {
-      return (
-        <div className="h-full w-full pb-[88px] md:pb-0">
-          <Header />
-          <div className="min-h-screen bg-gray-50">
-            <div className="w-full px-0 py-0 md:px-8 md:py-10 lg:px-[120px] lg:py-12">
-              <FundWallet embedded />
-            </div>
-          </div>
-          <Navigation />
-          <Footer />
-        </div>
-      );
-    }
+function DashboardPage() {
+  
 
     return (
         <div className="h-full w-full pb-[88px] md:pb-0">
