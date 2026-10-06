@@ -54,7 +54,7 @@ function FundWallet({ embedded = false, onBack }) {
           <button
             type='button'
             onClick={handleBack}
-            className='mb-[6px] flex items-center gap-[6px] text-[12px] font-semibold text-[#475569] transition hover:text-[#2563EB]'
+            className='mb-[6px] flex items-center gap-[6px] rounded-full text-[12px] font-semibold text-[#3B82F6] transition hover:text-[#2563EB]'
           >
             <span aria-hidden='true' className='text-[18px] leading-none'>‹</span>
             Back to dashboard
@@ -108,7 +108,7 @@ function FundWallet({ embedded = false, onBack }) {
                       setCustomAmount('');
                     }}
                     className={[
-                      'flex h-[42px] items-center justify-center rounded-[13px] border px-[8px] text-[12px] font-bold transition lg:h-[42px] lg:rounded-[13px] lg:px-[8px] lg:text-[12px]',
+                      'flex h-[42px] items-center justify-center rounded-full border px-[8px] text-[12px] font-bold transition lg:h-[42px] lg:rounded-full lg:px-[8px] lg:text-[12px]',
                       isSelected
                         ? 'border-[#3B82F6] bg-[#3B82F6] text-white'
                         : 'border-[#DCE5F1] bg-white text-[#0F172A] hover:border-[#93C5FD]',

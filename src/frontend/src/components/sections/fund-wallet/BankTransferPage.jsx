@@ -13,7 +13,7 @@ export default function BankTransferPage({ selectedAmount = 1000, onBack, onCont
             <button
               type='button'
               onClick={onBack}
-              className='mb-[2px] flex w-fit items-center gap-[6px] text-[12px] font-semibold text-[#475569] transition hover:text-[#2563EB]'
+              className='mb-[2px] flex w-fit items-center gap-[6px] rounded-full text-[12px] font-semibold text-[#3B82F6] transition hover:text-[#2563EB]'
             >
               <FiChevronLeft className='h-[16px] w-[16px]' />
               Back
@@ -120,7 +120,7 @@ export default function BankTransferPage({ selectedAmount = 1000, onBack, onCont
                 <button
                   type='button'
                   onClick={onContinue}
-                  className='mt-[18px] w-full rounded-[14px] bg-[#2563EB] px-[18px] py-[14px] text-[18px] font-bold text-white transition hover:bg-[#1D4ED8]'
+                  className='mt-[18px] w-full rounded-full bg-[#3B82F6] px-[18px] py-[14px] text-[18px] font-bold text-white transition hover:bg-[#2563EB]'
                 >
                   Continue
                 </button>

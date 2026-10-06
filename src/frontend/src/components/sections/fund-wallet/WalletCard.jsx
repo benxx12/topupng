@@ -42,7 +42,7 @@ export default function WalletCard({ balance = '₦4,850.00', method = 'Debit Ca
         <button
           type="button"
           onClick={onContinue}
-          className="mt-[18px] w-full rounded-[14px] bg-[#2563EB] px-[18px] py-[14px] text-[16px] font-bold text-white transition hover:bg-[#1D4ED8]"
+          className="mt-[18px] w-full rounded-full bg-[#3B82F6] px-[18px] py-[14px] text-[16px] font-bold text-white transition hover:bg-[#2563EB]"
         >
           Continue
         </button>

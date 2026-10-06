@@ -20,7 +20,7 @@ export default function VerifyPaymentPage({
             <button
               type='button'
               onClick={onBack}
-              className='mb-[2px] flex w-fit items-center gap-[6px] text-[12px] font-semibold text-[#475569] transition hover:text-[#2563EB]'
+              className='mb-[2px] flex w-fit items-center gap-[6px] rounded-full text-[12px] font-semibold text-[#3B82F6] transition hover:text-[#2563EB]'
             >
               <FiChevronLeft className='h-[16px] w-[16px]' />
               Back
@@ -63,7 +63,7 @@ export default function VerifyPaymentPage({
 
               <div className='mt-[18px] text-center text-[14px]'>
                 <span className='text-[#64748B]'>Didn't receive code?</span>
-                <button type='button' className='ml-[6px] font-semibold text-[#2563EB]'>Resend code</button>
+                <button type='button' className='ml-[6px] rounded-full px-[6px] py-[4px] font-semibold text-[#3B82F6]'>Resend code</button>
               </div>
 
               <div className='mt-[18px] flex items-center gap-[10px] rounded-[12px] bg-[#E0F2FE] px-[12px] py-[12px] text-[13px] text-[#0F172A]'>
@@ -77,7 +77,7 @@ export default function VerifyPaymentPage({
             <button
               type='button'
               onClick={onVerify}
-              className='mt-[20px] w-full rounded-[14px] bg-[#2563EB] px-[18px] py-[16px] text-[18px] font-bold text-white transition hover:bg-[#1D4ED8]'
+              className='mt-[20px] w-full rounded-full bg-[#3B82F6] px-[18px] py-[16px] text-[18px] font-bold text-white transition hover:bg-[#2563EB]'
             >
               Verify
             </button>

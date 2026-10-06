@@ -14,7 +14,7 @@ export default function ProgressSteps({ activeStep = 0 }) {
             <div
               className={[
                 'flex h-[26px] w-[26px] items-center justify-center rounded-full text-[12px] font-bold transition-all duration-200',
-                isActive ? 'bg-[#2563EB] text-white shadow-sm shadow-blue-200' : '',
+                isActive ? 'bg-[#3B82F6] text-white shadow-sm shadow-blue-200' : '',
                 isComplete ? 'bg-[#E0F2FE] text-[#2563EB]' : 'bg-[#F1F5F9] text-[#64748B]',
               ].join(' ')}
             >

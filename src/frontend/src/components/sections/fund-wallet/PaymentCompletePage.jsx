@@ -20,7 +20,7 @@ export default function PaymentCompletePage({
             <button
               type='button'
               onClick={onBack}
-              className='mb-[2px] flex w-fit items-center gap-[6px] text-[12px] font-semibold text-[#475569] transition hover:text-[#2563EB]'
+              className='mb-[2px] flex w-fit items-center gap-[6px] rounded-full text-[12px] font-semibold text-[#3B82F6] transition hover:text-[#2563EB]'
             >
               <FiChevronLeft className='h-[16px] w-[16px]' />
               Back
@@ -59,7 +59,7 @@ export default function PaymentCompletePage({
               <button
                 type='button'
                 onClick={onBackHome}
-                className='mt-[24px] w-full rounded-[14px] bg-[#2563EB] px-[18px] py-[16px] text-[20px] font-bold text-white shadow-[0_14px_32px_rgba(37,99,235,0.25)] transition hover:bg-[#1D4ED8]'
+                className='mt-[24px] w-full rounded-full bg-[#3B82F6] px-[18px] py-[16px] text-[20px] font-bold text-white shadow-[0_14px_32px_rgba(37,99,235,0.25)] transition hover:bg-[#2563EB]'
               >
                 Back to home
               </button>
@@ -67,10 +67,10 @@ export default function PaymentCompletePage({
           </div>
 
           <div className='w-full max-w-[420px] self-start'>
-            <div className='rounded-[22px] border border-[#D9EAF8] bg-[#F5F9FE] p-[18px]'>
+            <div className='rounded-[22px] border border-[#D9EAF8] bg-white p-[18px]'>
               <div className='flex items-center justify-between gap-[12px]'>
                 <h3 className='text-[20px] font-extrabold tracking-[-0.03em] text-[#0F172A]'>Transaction receipt</h3>
-                <button type='button' className='flex h-[32px] w-[32px] items-center justify-center rounded-[10px] bg-[#E0F2FE] text-[#2563EB]'>
+                <button type='button' aria-label='Download receipt' className='flex h-[32px] w-[32px] items-center justify-center rounded-full bg-[#E0F2FE] text-[#3B82F6]'>
                   <FiDownload className='h-[16px] w-[16px]' />
                 </button>
               </div>
@@ -95,7 +95,7 @@ export default function PaymentCompletePage({
               </div>
             </div>
 
-            <div className='mt-[18px] rounded-[22px] border border-[#D9EAF8] bg-[#F5F9FE] p-[18px]'>
+            <div className='mt-[18px] rounded-[22px] border border-[#D9EAF8] bg-white p-[18px]'>
               <div className='flex items-center gap-[12px]'>
                 <span className='flex h-[32px] w-[32px] items-center justify-center rounded-full bg-[#E0F2FE] text-[#2563EB]'>
                   <FiHeadphones className='h-[16px] w-[16px]' />

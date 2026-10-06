@@ -20,7 +20,7 @@ export default function ConfirmAccountPage({
             <button
               type='button'
               onClick={onBack}
-              className='mb-[2px] flex w-fit items-center gap-[6px] text-[12px] font-semibold text-[#475569] transition hover:text-[#2563EB]'
+              className='mb-[2px] flex w-fit items-center gap-[6px] rounded-full text-[12px] font-semibold text-[#3B82F6] transition hover:text-[#2563EB]'
             >
               <FiChevronLeft className='h-[16px] w-[16px]' />
               Back
@@ -53,7 +53,7 @@ export default function ConfirmAccountPage({
                   <label className='mb-[8px] block text-[14px] font-semibold text-[#334155]'>Select Bank</label>
                   <div className='flex items-center justify-between rounded-[14px] border border-[#CBD5E1] bg-[#F8FAFC] px-[14px] py-[14px]'>
                     <span className='text-[16px] font-medium text-[#0F172A]'>{bankName}</span>
-                    <button type='button' className='text-[14px] font-semibold text-[#2563EB]'>Change</button>
+                    <button type='button' className='rounded-full px-[8px] py-[4px] text-[14px] font-semibold text-[#3B82F6]'>Change</button>
                   </div>
                 </div>
 
@@ -87,7 +87,7 @@ export default function ConfirmAccountPage({
           </div>
 
           <div className='w-full max-w-[420px] self-start'>
-            <div className='rounded-[24px] border border-[#D9EAF8] bg-[#F5F9FE] p-[20px]'>
+            <div className='rounded-[24px] border border-[#D9EAF8] bg-white p-[20px]'>
               <h3 className='text-[20px] font-extrabold tracking-[-0.03em] text-[#0F172A]'>Transfer overview</h3>
 
               <div className='mt-[18px] space-y-[14px] text-[15px] text-[#334155]'>
@@ -127,7 +127,7 @@ export default function ConfirmAccountPage({
               <button
                 type='button'
                 onClick={onContinue}
-                className='mt-[18px] w-full rounded-[14px] bg-[#2563EB] px-[18px] py-[14px] text-[18px] font-bold text-white transition hover:bg-[#1D4ED8]'
+                className='mt-[18px] w-full rounded-full bg-[#3B82F6] px-[18px] py-[14px] text-[18px] font-bold text-white transition hover:bg-[#2563EB]'
               >
                 Continue
               </button>
