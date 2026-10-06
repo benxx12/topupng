@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import Header from "../../components/common/header"
 import Navigation from "../../components/common/navigation"
 import Footer from "../../components/common/footer"
@@ -6,16 +7,11 @@ import WalletBalance from '../../components/sections/Dashboard/WalletBalance.jsx
 import QuickActions from '../../components/sections/Dashboard/QuickActions.jsx';
 import RecentTransactions from '../../components/sections/Dashboard/RecentTransaction.jsx';
 import PromoCard from '../../components/sections/Dashboard/PromoCard.jsx';
+import FundWallet from './FundWallet';
 
 
-function DashboardPage() {
-  
-
-    return (
-        <div className="h-full w-full pb-[88px] md:pb-0">
-          <Header />
-            
-            <div className="min-h-screen bg-gray-50">
+const DashboardView = ({ onViewChange }) =>{
+  return <div className="min-h-screen bg-gray-50">
       {/* Main Container */}
       <div className="w-full px-0 py-0 md:px-8 md:py-10 lg:px-[120px] lg:py-12">
         {/* Desktop Layout */}
@@ -41,7 +37,7 @@ function DashboardPage() {
 
           {/* Right Column (1/3) */}
           <div className="flex flex-col gap-6">
-            <WalletBalance />
+            <WalletBalance onViewChange={onViewChange} />
             <PromoCard />
           </div>
         </div>
@@ -59,7 +55,7 @@ function DashboardPage() {
               
             </div>
             
-            <WalletBalance />
+            <WalletBalance onViewChange={onViewChange} />
           </div>
 
           {/* Quick Actions */}
@@ -80,6 +76,23 @@ function DashboardPage() {
         </div>
       </div>
     </div>
+}
+
+const WalletView = ({ onBack }) => {
+  return <div className="min-h-screen bg-gray-50 px-0 py-0 md:px-8 md:py-10 lg:px-[120px] lg:py-12">
+    <FundWallet embedded={true} onBack={onBack} />
+  </div>
+}
+
+function DashboardPage() {
+  const [view, setView] = useState('dashboard')
+
+    return (
+        <div className="h-full w-full pb-[88px] md:pb-0">
+          <Header />
+            
+            {view==='dashboard'?<DashboardView onViewChange={()=> setView('wallet')} />:
+            <WalletView onBack={() => setView('dashboard')} />}
                 <Navigation />
                 <Footer />
         </div>
